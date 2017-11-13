@@ -114,6 +114,7 @@ $.CestaFeira().getItems();
 **removeItem**
 
 Remove an item from the basket by passing the Item ID as an argument.
+Returns `true` in success case.
 ```
 example:
 $.CestaFeira().removeItem(1);
@@ -122,9 +123,50 @@ $.CestaFeira().removeItem(1);
 **clearBasket**
 
 Remove all items from the basket.
+Returns `true` in success case.
 ```
 example:
 $.CestaFeira().clearBasket();
+```
+
+### Triggers
+
+All triggers are called in `$(document)`.
+
+**cesta-feira-item-added**
+
+Shot when an item was added to a basket
+
+```
+example:
+$(document).on('cesta-feira-item-added', function(){ // your code here });
+```
+
+**cesta-feira-item-updated**
+
+Shot when a basket item has been updated
+
+```
+example:
+$(document).on('cesta-feira-item-updated', function(){ // your code here });
+```
+
+**cesta-feira-item-deleted**
+
+Shot when an item is deleted from the basket
+
+```
+example:
+$(document).on('cesta-feira-item-deleted', function(){ // your code here });
+```
+
+**cesta-feira-clear-basket**
+
+Shot when the basket is emptied
+
+```
+example:
+$(document).on('cesta-feira-clear-basket', function(){ // your code here });
 ```
 
 
